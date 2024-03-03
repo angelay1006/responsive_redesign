@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #d8d8d8; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FONTS **********************************************************************/
+.title h1 {
+    font-family: 'Commissioner', sans-serif;
+    color: #4C3B4D;
+    font-size: 150px;
+    margin-bottom: -200px;
+    margin-top: -55px;
+    align-self: center;
+}
+
+.subtitle h3 {
+    font-family: 'CMU Sans Serif', sans-serif;
+    font-weight: bold; 
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.description p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    font-weight: bold;
+}
+
+/* NAVBAR *********************************************************************/
+.navbar {
+    background-color: #D8D8D8;
+    overflow: hidden;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensure navbar is above other content */
+    display: flex;
+    justify-content: space-around; /* Adjust spacing of links */
+    align-items: center;
+    padding: 10px 20px; /* Add some padding on the sides */
+    font-family: 'CMU Sans Serif', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar a {
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* LANDING PAGE ***************************************************************/
+.landing_page {
+    position: relative; 
+    min-height: calc(100vh - 75px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f3f3f3;
+}
+
+.title, .subtitle {
+    z-index: 2; /* Ensures they are above the main image */
+    position: relative; 
+}
+
+
+.main-image {
+    width: 100%; /* Ensures the image container spans the full width */
+    z-index: 0; /* Ensures the image is below the title and subtitle */
+    display: flex;
+    justify-content: center; /* Centers the image */
+    align-self: flex-end;
+}
+
+
+.main-image img {
+    width: auto; /* Allows the image to maintain its aspect ratio */
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    max-height: 567px; /* Maintains a maximum height for the image */
+    object-fit: contain; /* Ensures the entire image is visible, scaled to fit */
+    margin: auto; /* Centers the image horizontally in the container */
+    display: block; /* Treats the image as a block-level element, enabling margin auto to work */
+}
+
+
+/* DETAILS PAGE ***************************************************************/
+
+.service-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+    margin-bottom: 100px;
+}
+
+.card {
+    width: 317px;
+    position: relative;
+    height: 393px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip on hover */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face */
+}
+
+.card-back {
+    background: #f8f8f8;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Initially rotated away */
+}
+
+.service-image {
+    width: 317px;
+    height: 393px;
+    object-fit: cover;
+}
