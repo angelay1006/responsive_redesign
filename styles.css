@@ -1,11 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color: #d8d8d8; */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: auto;
 }
 
@@ -19,35 +18,13 @@ body {
     justify-content: center;
 }
 
-/* FONTS **********************************************************************/
-.title h1 {
-    font-family: 'Commissioner', sans-serif;
-    color: #4C3B4D;
-    font-size: 150px;
-    margin-bottom: -150px;
-    margin-top: -55px;
-    align-self: center;
-}
-
-.subtitle h3 {
-    font-family: 'CMU Sans Serif', sans-serif;
-    font-weight: bold; 
-    color: black;
-    font-size: 40px;
-    text-align: center;
-}
-
-.description p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; 
-    font-weight: bold;
-}
 
 /* NAVBAR *********************************************************************/
 .navbar {
     background-color: #D8D8D8;
     overflow: hidden;
     position: sticky;
-    top: 0; /* Fixed at the top */
+    top: 0; 
     z-index: 1000; 
     display: flex;
     justify-content: space-around; 
@@ -72,6 +49,23 @@ body {
 }
 
 /* LANDING PAGE ***************************************************************/
+.title h1 {
+    font-family: 'Commissioner', sans-serif;
+    color: #4C3B4D;
+    font-size: 12vw;
+    margin-bottom: -150px;
+    margin-top: -55px;
+    align-self: center;
+}
+
+.subtitle h3 {
+    font-family: 'CMU Sans Serif', sans-serif;
+    font-weight: bold; 
+    color: black;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
 .landing_page {
     position: relative; 
     min-height: calc(100vh - 75px); 
@@ -84,7 +78,7 @@ body {
 }
 
 .title, .subtitle {
-    z-index: 2; /* Ensures they are above the main image */
+    z-index: 2; 
     position: relative; 
     top: 150px;
 }
@@ -92,7 +86,7 @@ body {
 
 .main-image {
     width: 100%; 
-    z-index: 0; /* Ensures the image is below the title and subtitle */
+    z-index: 0; 
     display: flex;
     justify-content: center; 
     align-self: flex-end;
@@ -102,24 +96,50 @@ body {
 
 
 .main-image img {
-    width: auto; /* Allows the image to maintain its aspect ratio */
-    max-width: 100%; /* Ensures the image does not exceed the container's width */
-    max-height: 567px; /* Maintains a maximum height for the image */
-    object-fit: contain; /* Ensures the entire image is visible, scaled to fit */
-    margin: auto; /* Centers the image horizontally in the container */
-    display: block; /* Treats the image as a block-level element, enabling margin auto to work */
+    width: auto; 
+    max-width: 100%; 
+    max-height: 567px; 
+    object-fit: contain; 
+    margin: auto; 
+    display: block; 
 }
 
 
 /* DETAILS PAGE ***************************************************************/
+.details-page h2 {
+    font-family: 'CMU Sans Serif', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    margin-top: -90px;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    font-weight: bold;
+}
+
+
+.details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally in the container */
+    justify-content: center; /* Centers items vertically in the container */
+    text-align: center; /* Centers the text inside the child elements */
+    min-height: 100vh; /* Optional: Ensures the container takes at least the full height of the viewport */
+    padding: 10px; /* Adds some padding around the content */
+    background-color: #FCF9F0;
+}
+
 
 .service-images {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    gap: 20px; /* Space between cards */
-    margin-bottom: 100px;
+    gap: 30px; /* Space between cards */
+    margin-bottom: 50px;
+    margin-top: -10px;
 }
 
 .card {
@@ -155,6 +175,8 @@ body {
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg); /* Initially rotated away */
+    font-family: 'CMU Sans Serif', sans-serif;
+    font-weight: bold;
 }
 
 .service-image {
@@ -162,3 +184,28 @@ body {
     height: 393px;
     object-fit: cover;
 }
+
+.details-page .description p {
+    width: 90%; /* Default width to allow some margin on small screens */
+    max-width: calc(317px * 3); /* Maximum width to match the cards */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+/* For phone */
+/* @media only screen and (max-width: 375px) {
+
+} */
+
+/* for tablets */
+/* @media only screen and (min-width: 768px) {
+
+} */
+
+/* large computers */ 
+/* @media only screen and (min-width: 3840px) {
+    
+} */
+
+
