@@ -7,7 +7,6 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
 }
 
 .header {
@@ -25,7 +24,7 @@ body {
     font-family: 'Commissioner', sans-serif;
     color: #4C3B4D;
     font-size: 150px;
-    margin-bottom: -200px;
+    margin-bottom: -150px;
     margin-top: -55px;
     align-self: center;
 }
@@ -47,15 +46,15 @@ body {
 .navbar {
     background-color: #D8D8D8;
     overflow: hidden;
-    position: sticky; /* Make navbar sticky */
+    position: sticky;
     top: 0; /* Fixed at the top */
-    z-index: 1000; /* Ensure navbar is above other content */
+    z-index: 1000; 
     display: flex;
-    justify-content: space-around; /* Adjust spacing of links */
+    justify-content: space-around; 
     align-items: center;
-    padding: 10px 20px; /* Add some padding on the sides */
+    padding: 10px 20px;
     font-family: 'CMU Sans Serif', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     color: black;
 }
 
@@ -81,20 +80,24 @@ body {
     justify-content: center; 
     align-items: center; 
     background-color: #f3f3f3;
+    padding-bottom: 20px;
 }
 
 .title, .subtitle {
     z-index: 2; /* Ensures they are above the main image */
     position: relative; 
+    top: 150px;
 }
 
 
 .main-image {
-    width: 100%; /* Ensures the image container spans the full width */
+    width: 100%; 
     z-index: 0; /* Ensures the image is below the title and subtitle */
     display: flex;
-    justify-content: center; /* Centers the image */
+    justify-content: center; 
     align-self: flex-end;
+    margin-top: auto;
+    position: relative;
 }
 
 
