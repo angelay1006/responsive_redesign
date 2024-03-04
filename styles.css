@@ -106,12 +106,22 @@ body {
 
 
 /* DETAILS PAGE ***************************************************************/
+.details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    min-height: 100vh; 
+    padding: 10px; 
+    background-color: #FCF9F0;
+}
+
 .details-page h2 {
     font-family: 'CMU Sans Serif', sans-serif;
     font-weight: bold;
-    font-size: 80px;
-    margin-top: -90px;
-    margin-bottom: 20px;
+    font-size: 10vh;
+    margin-top: -1vh;
 }
 
 .description p {
@@ -119,27 +129,14 @@ body {
     font-weight: bold;
 }
 
-
-.details-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items horizontally in the container */
-    justify-content: center; /* Centers items vertically in the container */
-    text-align: center; /* Centers the text inside the child elements */
-    min-height: 100vh; /* Optional: Ensures the container takes at least the full height of the viewport */
-    padding: 10px; /* Adds some padding around the content */
-    background-color: #FCF9F0;
-}
-
-
 .service-images {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    gap: 30px; /* Space between cards */
-    margin-bottom: 50px;
-    margin-top: -10px;
+    flex-wrap: wrap; 
+    gap: 2vw; /* Space between cards */
+    margin-bottom: 3vh;
+    margin-top: -5vh;
 }
 
 .card {
@@ -192,86 +189,97 @@ body {
     margin-right: auto;
 }
 
-/* .details-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    min-height: 100vh; 
-    background-color: #FCF9F0;
-    padding-top: 1rem;
+
+
+
+/* large computers */ 
+@media only screen and (min-width: 3840px) {
+    /* LANDING PAGE */
+    .title h1 {
+        font-family: 'Commissioner', sans-serif;
+        color: #4C3B4D;
+        font-size: 12vw;
+        margin-bottom: -290vh;
+        align-self: center;
+    }
+    .subtitle h3 {
+        font-family: 'CMU Sans Serif', sans-serif;
+        font-weight: bold; 
+        color: black;
+        font-size: 2.5vw;
+        text-align: center;
+        margin-top: 15vh;
+    }
+
+    /* DETAILS PAGE */
+    .details-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the content horizontally */
+        justify-content: space-around; /* Adjusts the spacing evenly between the items */
+        text-align: center; /* Centers the text inside the child elements */
+        min-height: 100vh; /* Ensures the container takes at least the full height of the viewport */
+        padding: 2vw; /* Adds some padding around the content for better layout */
+    }
+
+    .details-page h2 {
+        font-family: 'CMU Sans Serif', sans-serif;
+        font-weight: bold;
+        font-size: 5vw;
+    }
+
+    .service-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        gap: 2vw; 
+        max-width: 80%;
+        height: auto; 
+    }
+
+    .card {
+        width: 15vw;
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-front, .card-back {
+        width: 100%; /* Ensures both front and back cover the full card */
+        height: 100%; /* Ensures both front and back cover the full card */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Centers the text within the card-back */
+    }
+
+    .service-image {
+        width: 100%; 
+        height: 20vw; 
+        object-fit: cover;
+    }
+
+    .card-back {
+        background-color: #FCF9F0;
+    }
+
+    .card-back p {
+        font-size: 1.5vw; /* Responsive font size for larger screens */
+        margin: 0; /* Remove default margins to ensure consistent alignment */
+        padding: 1vw; /* Add some padding for better readability */
+    }
+
+    .details-page .description p{
+        margin-top: 1vw; /* Ensures there's space between the cards and the description text */
+        font-size: 1vw; /* Responsive font size for larger screens */
+        max-width: 80%;
+        width: 80%;
+    }
 }
-
-.details-page h2 {
-    font-family: 'CMU Sans Serif', sans-serif;
-    font-weight: bold;
-    font-size: 8vw;
-    margin-top: 0;
-    padding-top: 1rem;
-}
-
-
-.service-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1vw;
-}
-
-.card {
-    width: 15vw;
-    position: relative;
-    height: 100%;
-    perspective: 1000px;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg); 
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; 
-}
-
-.card-back {
-    background: #f8f8f8;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(180deg); 
-    font-family: 'CMU Sans Serif', sans-serif;
-    font-weight: bold;
-}
-
-.service-image {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-}
-
-.details-page .description {
-    width: 90%;
-    max-width: calc(317px * 3); 
-}
-
-.description p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; 
-    font-weight: bold;
-} */
 
 
 /* For phone */
@@ -282,59 +290,6 @@ body {
 /* for tablets */
 /* @media only screen and (min-width: 768px) {
 
-} */
-
-/* large computers */ 
-/* @media only screen and (min-width: 3840px) {
-    .title h1 {
-        font-family: 'Commissioner', sans-serif;
-        color: #4C3B4D;
-        font-size: 12vw;
-        margin-bottom: -290vh;
-        align-self: center;
-    }
-
-    .subtitle h3 {
-        font-family: 'CMU Sans Serif', sans-serif;
-        font-weight: bold; 
-        color: black;
-        font-size: 2.5vw;
-        text-align: center;
-        margin-top: 15vh;
-    }
-
-    .details-page h2 {
-        font-family: 'CMU Sans Serif', sans-serif;
-        font-weight: bold;
-        font-size: 6vw;
-        margin-top: -40vh;
-    }
-
-
-    .service-images {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap; 
-        gap: 30px; 
-        margin-bottom: 50px;
-        margin-top: -10px;
-    }
-    
-    .card {
-        width: 15vw; 
-        height: calc(15vw * 1.25);
-        max-width: none; 
-    }
-    
-    
-    .details-page .description p {
-        width: 90%;
-        max-width: calc(317px * 3); 
-        margin-left: auto; 
-        margin-right: auto;
-
-    } 
 } */
 
 
