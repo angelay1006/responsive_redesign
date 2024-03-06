@@ -173,6 +173,7 @@ body {
     justify-content: center;
     transform: rotateY(180deg); 
     font-family: 'CMU Sans Serif', sans-serif;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
